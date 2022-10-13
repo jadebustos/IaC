@@ -76,24 +76,28 @@ class Zone:
 
 
         # write zone file
+        print("Creating %s file ..." % zone_file)
         with open(zone_file, "w") as zonefile:
             zonefile.write('\n'.join(str(item) for item in zone))
         zonefile.close()
         os.chmod(zone_file, 0o644)
 
         # write reverse zone file
+        print("Creating %s file ..." % inv_zone_file)
         with open(inv_zone_file, "w") as zonefile:
             zonefile.write('\n'.join(str(item) for item in inv_zone))
         zonefile.close()
         os.chmod(inv_zone_file, 0o644)
 
         # write configuration zone file
+        print("Creating %s file ..." % zone_conf_file)
         with open(zone_conf_file, "w") as zonefile:
             zonefile.write('\n'.join(str(item) for item in zone_conf))
         zonefile.close()
         os.chmod(zone_conf_file, 0o644)
 
         # add zone to bind configuration file
+        print("Adding zone %s to file %s (if needed)..." % (self.data['fqdn'], bind_conf_file))
         zoneconf = 'include \"/etc/named/' + self.data['fqdn'] + '.conf\";'
         with open(bind_conf_file, "r") as bindfile:
             if not any(zoneconf == x.rstrip('\r\n') for x in bindfile):
