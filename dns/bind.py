@@ -46,6 +46,9 @@ class Zone:
             # create inverse zone file
             inv_zone_file.append(str(item[3]) + '\tIN\tPTR\t' + item[2] + '.' + self.data['fqdn'] + '.\t; ' + item[4])
 
+        zone_file.append('\n')
+        inv_zone_file.append('\n')
+
         # zone configuration file
         zone_conf_file.append('zone \"' + self.data['fqdn'] + '\" IN {')
         zone_conf_file.append('\ttype master;')
@@ -83,7 +86,7 @@ class Zone:
         zonefile.close()
 
         # write configuration zone file
-        with open(bind_conf_file, "w") as zonefile:
+        with open(zone_conf_file, "w") as zonefile:
             zonefile.write('\n'.join(str(item) for item in zone_conf))
         zonefile.close()
 
