@@ -79,16 +79,19 @@ class Zone:
         with open(zone_file, "w") as zonefile:
             zonefile.write('\n'.join(str(item) for item in zone))
         zonefile.close()
+        so.chmod(zone_file, 0o644)
 
         # write reverse zone file
         with open(inv_zone_file, "w") as zonefile:
             zonefile.write('\n'.join(str(item) for item in inv_zone))
         zonefile.close()
+        so.chmod(zone_file, 0o644)
 
         # write configuration zone file
         with open(zone_conf_file, "w") as zonefile:
             zonefile.write('\n'.join(str(item) for item in zone_conf))
         zonefile.close()
+        so.chmod(zone_file, 0o644)
 
         # add zone to bind configuration file
         zoneconf = 'include \"/etc/named/' + self.data['fqdn'] + '.conf\";'
