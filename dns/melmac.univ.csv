@@ -1,0 +1,10 @@
+ip;register;destination;ptr;comments
+192.168.1.100;A;nas;100;nas
+192.168.1.110;A;lab-master;110;vm k8s master
+192.168.1.111;A;lab-worker01;111;vm k8s node1
+192.168.1.112;A;lab-worker02;112;vm k8s node2
+192.168.1.150;A;lezo;150;hp server
+192.168.1.160;A;kubemaster;160;vm k8s master
+192.168.1.161;A;kubenode1;161;vm k8s node1
+192.168.1.162;A;kubenode2;162;vm k8s node2
+192.168.1.200;A;beast;200;hp server
