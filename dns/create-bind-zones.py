@@ -33,7 +33,6 @@ def main(args):
         zone_data['retry'] = config.get(sec, 'retry')
         zone_data['expire'] = config.get(sec, 'expire')
         zone_data['minttl'] = config.get(sec, 'minttl')
-        zone_data['ns'] = config.get(sec, 'ns')
         zone_data['serial'] = args['serial']
         
         myzone = Zone(zone_data)
