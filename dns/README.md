@@ -56,8 +56,9 @@ ip;register;destination;ptr;comments
 192.168.1.112;A;lab-worker02;112;vm k8s node2
 ```
 
-In __vars.py__ configure:
+In _vars.py_ configure:
 
+* **bind_conf_file** bind configuration file.
 * **zone_dir** with the directory where zones are stored.
 * **zone_conf_dir** with the directory where bind configuration is stored.
 

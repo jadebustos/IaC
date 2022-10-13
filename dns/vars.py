@@ -3,6 +3,7 @@
 # the GNU General Public License v3.0. 
 # See https://www.gnu.org/licenses/gpl-3.0.html
 
+bind_conf_file = '/etc/named.conf'
 zone_dir = '/tmp'
 zone_conf_dir = '/etc/named/'
 zone_conf_dir = '/tmp'
