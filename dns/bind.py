@@ -85,13 +85,13 @@ class Zone:
         with open(inv_zone_file, "w") as zonefile:
             zonefile.write('\n'.join(str(item) for item in inv_zone))
         zonefile.close()
-        os.chmod(zone_file, 0o644)
+        os.chmod(inv_zone_file, 0o644)
 
         # write configuration zone file
         with open(zone_conf_file, "w") as zonefile:
             zonefile.write('\n'.join(str(item) for item in zone_conf))
         zonefile.close()
-        os.chmod(zone_file, 0o644)
+        os.chmod(zone_conf_file, 0o644)
 
         # add zone to bind configuration file
         zoneconf = 'include \"/etc/named/' + self.data['fqdn'] + '.conf\";'
