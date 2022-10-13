@@ -34,7 +34,7 @@ class Zone:
         zone_file.append('\t\t\t\t' + self.data['expire'] + '\t\t; expire')
         zone_file.append('\t\t\t\t' + self.data['minttl'] + '\t\t; minimum TTL')
         zone_file.append('\t\t\t\t)')
-        zone_file.append('\tIN\tNS\t' + self.data['ns'])
+        zone_file.append('\tIN\tNS\t' + self.data['primaryns'])
         zone_file.append('\n')
 
         # header for the inverse zone file
