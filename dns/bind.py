@@ -75,19 +75,16 @@ class Zone:
         # write zone file
         with open(zone_file, "w") as zonefile:
             zonefile.write('\n'.join(str(item) for item in zone))
-
         zonefile.close()
 
         # write reverse zone file
         with open(inv_zone_file, "w") as zonefile:
             zonefile.write('\n'.join(str(item) for item in inv_zone))
-
         zonefile.close()
 
         # write configuration zone file
-        with open(zone_conf_file, "w") as zonefile:
+        with open(bind_conf_file, "w") as zonefile:
             zonefile.write('\n'.join(str(item) for item in zone_conf))
-
         zonefile.close()
 
         # add zone to bind configuration file
@@ -95,3 +92,4 @@ class Zone:
         with open(bind_conf_file, "a+") as bindfile:
             if not any(zoneconf == x.rstrip('\r\n') for x in bindfile):
                 bindfile.write(zoneconf + '\n')
+        bindfile.close()
