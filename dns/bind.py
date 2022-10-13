@@ -72,7 +72,7 @@ class Zone:
         inv_filename = self.inv_name + '.' + self.data['fqdn']
         inv_zone_file = os.path.join(zone_dir, inv_filename)
         # configuration zone file
-        zone_conf_file = os.path.join(zone_dir, self.data['fqdn'] + '.conf')
+        zone_conf_file = os.path.join(zone_conf_dir, self.data['fqdn'] + '.conf')
 
 
         # write zone file
