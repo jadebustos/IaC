@@ -4,6 +4,5 @@
 # See https://www.gnu.org/licenses/gpl-3.0.html
 
 bind_conf_file = '/etc/named.conf'
-zone_dir = '/tmp'
+zone_dir = '/var/named/zones/'
 zone_conf_dir = '/etc/named/'
-zone_conf_dir = '/tmp'
