@@ -89,3 +89,9 @@ class Zone:
             zonefile.write('\n'.join(str(item) for item in zone_conf))
 
         zonefile.close()
+
+        # add zone to bind configuration file
+        zoneconf = 'include \"/etc/named/' + self.data['fqdn'] + '.conf\";'
+        with open(bind_conf_file, "a+") as bindfile:
+            if not any(zoneconf == x.rstrip('\r\n') for x in bindfile):
+        bindfile.write(zoneconf + '\n')

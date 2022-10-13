@@ -71,4 +71,4 @@ To create the zones:
 ```
 
 * **-f zones.ini** zones to create/update.
-* **-s 01** will be used as serial. In this case serial will be **YYYYMMDD01**.
+* **-s 01** will be used as serial. In this case zone serial will be **YYYYMMDD01**.
