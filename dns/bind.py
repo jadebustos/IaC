@@ -42,9 +42,9 @@ class Zone:
 
         for item in data.to_numpy().tolist():
             # create zone file
-            zone_file.append(item[0] + '\tIN\t' + item[1] + '\t' + item[2] + '\t; ' + item[4]) 
+            zone_file.append(item[2] + '\tIN\t' + item[1] + '\t' + item[0] + '\t; ' + item[4]) 
             # create inverse zone file
-            inv_zone_file.append(str(item[2]) + '\tIN\tPTR\t' + item[3] + '.' + self.data['fqdn'] + '.\t; ' + item[4])
+            inv_zone_file.append(str(item[3]) + '\tIN\tPTR\t' + item[2] + '.' + self.data['fqdn'] + '.\t; ' + item[4])
 
         zone_file.append('\n')
         inv_zone_file.append('\n')
