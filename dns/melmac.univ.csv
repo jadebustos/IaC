@@ -12,4 +12,4 @@ ip;register;destination;ptr;comments
 192.168.1.161;A;kubenode1;161;vm k8s node1
 192.168.1.162;A;kubenode2;162;vm k8s node2
 192.168.1.200;A;beast;200;hp server
-192.168.1.212;A;beast;212;raspberry pi 3b+
+192.168.1.213;A;rsp3213;213;raspberry pi 3b+
