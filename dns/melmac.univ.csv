@@ -1,5 +1,7 @@
 ip;register;destination;ptr;comments
 192.168.1.1;A;router;1;router
+192.168.1.2;A;rpn12;2;wifi repeater (MOVISTAR_7165_RPT2)
+192.168.1.3;A;tlwa850re;3;wifi repeater (MOVISTAR_7165_EXT2)
 192.168.1.4;A;rtn12e;4;wifi repeater (MOVISTAR_7165_RPT)
 192.168.1.100;A;nas;100;nas
 192.168.1.110;A;lab-master;110;vm k8s master
@@ -10,3 +12,4 @@ ip;register;destination;ptr;comments
 192.168.1.161;A;kubenode1;161;vm k8s node1
 192.168.1.162;A;kubenode2;162;vm k8s node2
 192.168.1.200;A;beast;200;hp server
+192.168.1.212;A;beast;212;raspberry pi 3b+
